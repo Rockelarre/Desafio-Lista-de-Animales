@@ -89,6 +89,15 @@ let consulta = (event) => {
         resultado.innerHTML = `<li>${conejo.datosPropietario()}</li>
                                 <li>El tipo de animal es un: ${conejo.tipo}, mientras que el nombre de la mascota es: ${conejo.nombreMascota} y la enfermedad es: ${conejo.enfermedad}</li>`;
     }
+
+    // Limpiar campos del formulario
+    document.getElementById('propietario').value = '';
+    document.getElementById('direccion').value = '';
+    document.getElementById('telefono').value = '';
+    document.getElementById('nombreMascota').value = '';
+    document.getElementById('tipo').value = 'perro';
+    document.getElementById('enfermedad').value = '';
+    
 }
 
 // Método de escucha incluido en el formulario, que lanzará el método
