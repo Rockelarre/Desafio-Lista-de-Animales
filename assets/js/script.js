@@ -24,7 +24,7 @@ class Animal extends Propietario{
 
     // Método Get
     get tipo(){
-        return this._tipo;
+        return `El tipo de animal es un: ${this._tipo}`;
     }
 }
 
@@ -79,15 +79,15 @@ let consulta = (event) => {
     if( tipo == 'perro'){
         let perro = new Mascota(dueño,direccion,telefono,tipo,nombreMascota,enfermedad);
         resultado.innerHTML = `<li>${perro.datosPropietario()}</li>
-                                <li>El tipo de animal es un: ${perro.tipo}, mientras que el nombre de la mascota es: ${perro.nombreMascota} y la enfermedad es: ${perro.enfermedad}</li>`;
+                                <li>${perro.tipo}, mientras que el nombre de la mascota es: ${perro.nombreMascota} y la enfermedad es: ${perro.enfermedad}</li>`;
     } else if (tipo == 'gato'){
         let gato = new Mascota(dueño,direccion,telefono,tipo,nombreMascota,enfermedad);
         resultado.innerHTML = `<li>${gato.datosPropietario()}</li>
-                                <li>El tipo de animal es un: ${gato.tipo}, mientras que el nombre de la mascota es: ${gato.nombreMascota} y la enfermedad es: ${gato.enfermedad}</li>`;
+                                <li>${gato.tipo}, mientras que el nombre de la mascota es: ${gato.nombreMascota} y la enfermedad es: ${gato.enfermedad}</li>`;
     } else if (tipo == 'conejo'){
         let conejo = new Mascota(dueño,direccion,telefono,tipo,nombreMascota,enfermedad);
         resultado.innerHTML = `<li>${conejo.datosPropietario()}</li>
-                                <li>El tipo de animal es un: ${conejo.tipo}, mientras que el nombre de la mascota es: ${conejo.nombreMascota} y la enfermedad es: ${conejo.enfermedad}</li>`;
+                                <li>${conejo.tipo}, mientras que el nombre de la mascota es: ${conejo.nombreMascota} y la enfermedad es: ${conejo.enfermedad}</li>`;
     }
 
     // Limpiar campos del formulario
